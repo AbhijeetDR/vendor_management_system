@@ -9,7 +9,7 @@ class PurchaseOrder(models.Model):
         ('canceled', 'Canceled'),
     ]
 
-    po_number = models.CharField(max_length=50, primary_key=True)
+    po_number = models.AutoField(primary_key=True)
     vendor = models.ForeignKey(Vendor, on_delete=models.CASCADE)
     order_date = models.DateTimeField()
     delivery_date = models.DateTimeField()
